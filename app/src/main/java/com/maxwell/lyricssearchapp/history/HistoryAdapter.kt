@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.maxwell.lyricssearchapp.LyricsViewModel
 import com.maxwell.lyricssearchapp.R
 
 class HistoryVH(v: View): RecyclerView.ViewHolder(v) {
@@ -12,7 +13,7 @@ class HistoryVH(v: View): RecyclerView.ViewHolder(v) {
     val tvArtist: TextView = v.findViewById(R.id.tvArtist)
 }
 
-class HistoryAdapter(private var searchHistoryList: ArrayList<SearchHistory>): RecyclerView.Adapter<HistoryVH>() {
+class HistoryAdapter(private var searchHistoryList: ArrayList<SearchHistory>, private val lyricsViewModel: LyricsViewModel): RecyclerView.Adapter<HistoryVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryVH {
         return HistoryVH(LayoutInflater.from(parent.context).inflate(R.layout.item_history, parent, false))
@@ -25,7 +26,7 @@ class HistoryAdapter(private var searchHistoryList: ArrayList<SearchHistory>): R
         holder.tvArtist.text = searchHistory.artist
 
         holder.itemView.setOnClickListener {
-
+            lyricsViewModel.searchLyrics(searchHistory.artist, searchHistory.title)
         }
     }
 

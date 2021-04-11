@@ -13,11 +13,16 @@ import retrofit2.Response
 class LyricsViewModel: ViewModel() {
     val lyrics = MutableLiveData<Lyric>()
     val searchHistoryList = MutableLiveData<ArrayList<SearchHistory>>(arrayListOf())
+    val searchingSong = MutableLiveData(false)
 
     fun searchLyrics(artist: String, title: String) {
+        searchingSong.postValue(true)
+
         LyricsBuilder.api.search(artist, title).enqueue(
             object: Callback<Lyric> {
                 override fun onResponse(call: Call<Lyric>, response: Response<Lyric>) {
+                    searchingSong.postValue(false)
+
                     if(response.isSuccessful) {
                         // fill the lyrics of song
                         lyrics.postValue(response.body())
@@ -33,6 +38,7 @@ class LyricsViewModel: ViewModel() {
                 }
 
                 override fun onFailure(call: Call<Lyric>, t: Throwable) {
+                    searchingSong.postValue(false)
                     lyrics.postValue(Lyric(null, "Network error, please try again"))
                 }
             }

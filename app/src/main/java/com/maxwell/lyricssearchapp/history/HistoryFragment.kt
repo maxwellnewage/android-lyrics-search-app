@@ -26,7 +26,7 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(v, savedInstanceState)
 
         val rvHistory: RecyclerView = v.findViewById(R.id.rvHistory)
-        val adapter = HistoryAdapter(arrayListOf())
+        val adapter = HistoryAdapter(arrayListOf(), lyricsViewModel)
         rvHistory.adapter = adapter
         rvHistory.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 

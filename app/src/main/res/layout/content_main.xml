@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/fSearchSong"
-        android:name="com.maxwell.lyricssearchapp.SearchFragment"
+        android:name="com.maxwell.lyricssearchapp.search.SearchFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/fLyricPreview"
-        android:name="com.maxwell.lyricssearchapp.LyricsFragment"
+        android:name="com.maxwell.lyricssearchapp.lyrics.LyricsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -61,5 +61,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout="@layout/fragment_history" />
+
+    <ProgressBar
+        android:id="@+id/pbSearching"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
