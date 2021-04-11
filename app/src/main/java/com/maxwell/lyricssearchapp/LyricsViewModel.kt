@@ -28,9 +28,15 @@ class LyricsViewModel: ViewModel() {
                         lyrics.postValue(response.body())
 
                         // add the search terms to history
-                        val list = searchHistoryList.value
-                        list?.add(SearchHistory(artist, title))
-                        searchHistoryList.postValue(list!!)
+                        // use bang bang operator because the value never is null
+                        val list = searchHistoryList.value!!
+                        val searchHistory = SearchHistory(artist, title)
+
+                        // checking if it's the terms aren't in the history
+                        if(!list.contains(searchHistory)) {
+                            list.add(SearchHistory(artist, title))
+                            searchHistoryList.postValue(list)
+                        }
                     } else {
                         val errorLyric = Gson().fromJson(response.errorBody()?.string(), Lyric::class.java)
                         lyrics.postValue(errorLyric)
