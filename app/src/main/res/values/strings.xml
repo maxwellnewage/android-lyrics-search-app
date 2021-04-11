@@ -4,4 +4,6 @@
     <string name="search_fragment_label">Search Lyrics</string>
 
     <string name="text_artist">Artist</string>
+
+    <string name="holder_lyrics_fragment">Search a song for find the lyrics.</string>
 </resources>
