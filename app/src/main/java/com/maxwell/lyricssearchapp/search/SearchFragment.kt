@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.maxwell.lyricssearchapp.LyricsViewModel
 import com.maxwell.lyricssearchapp.R
+import com.maxwell.lyricssearchapp.hideKeyboard
 
 class SearchFragment : Fragment() {
     private val lyricsViewModel: LyricsViewModel by activityViewModels()
@@ -30,6 +31,8 @@ class SearchFragment : Fragment() {
         val ibSearch: ImageButton = v.findViewById(R.id.ibSearch)
 
         ibSearch.setOnClickListener {
+            hideKeyboard()
+
             val artist = etArtist.text.toString()
             val songTitle = etSongTitle.text.toString()
 
