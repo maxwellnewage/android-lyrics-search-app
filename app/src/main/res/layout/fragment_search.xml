@@ -17,6 +17,7 @@
 
     <EditText
         android:id="@+id/etArtist"
+        android:text="u2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -29,6 +30,7 @@
 
     <EditText
         android:id="@+id/etSongTitle"
+        android:text="one"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

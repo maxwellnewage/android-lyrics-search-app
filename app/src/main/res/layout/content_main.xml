@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/fLyricPreview"
-        android:name="com.maxwell.lyricssearchapp.LyricFragment"
+        android:name="com.maxwell.lyricssearchapp.LyricsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -54,12 +54,12 @@
 
     <fragment
         android:id="@+id/fLastSearches"
-        android:name="com.maxwell.lyricssearchapp.LastSearchesFragment"
+        android:name="com.maxwell.lyricssearchapp.history.HistoryFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout="@layout/fragment_last_searches" />
+        tools:layout="@layout/fragment_history" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
