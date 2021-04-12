@@ -6,4 +6,6 @@
     <string name="text_artist">Artist</string>
 
     <string name="holder_lyrics_fragment">Search a song for find the lyrics.</string>
+    <string name="title_search_song">Search a song</string>
+    <string name="hint_song_title">Song title</string>
 </resources>

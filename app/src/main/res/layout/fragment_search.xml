@@ -10,7 +10,7 @@
         android:id="@+id/tvArtist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search a song"
+        android:text="@string/title_search_song"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Song title"
+        android:hint="@string/hint_song_title"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/ibSearch"
         app:layout_constraintStart_toStartOf="parent"
