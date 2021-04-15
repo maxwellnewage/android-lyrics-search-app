@@ -43,5 +43,10 @@ class SearchFragment : Fragment() {
 
             lyricsViewModel.searchLyrics(artist, songTitle)
         }
+
+        lyricsViewModel.currentSearch.observe(viewLifecycleOwner, {
+            etArtist.setText(it.artist)
+            etSongTitle.setText(it.title)
+        })
     }
 }

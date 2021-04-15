@@ -14,6 +14,7 @@ class LyricsViewModel: ViewModel() {
     val lyrics = MutableLiveData<Lyric>()
     val searchHistoryList = MutableLiveData<ArrayList<SearchHistory>>(arrayListOf())
     val searchingSong = MutableLiveData(false)
+    val currentSearch = MutableLiveData<SearchHistory>()
 
     fun searchLyrics(artist: String, title: String) {
         searchingSong.postValue(true)
@@ -31,6 +32,7 @@ class LyricsViewModel: ViewModel() {
                         // use bang bang operator because the value never is null
                         val list = searchHistoryList.value!!
                         val searchHistory = SearchHistory(artist, title)
+                        currentSearch.postValue(searchHistory)
 
                         // checking if it's the terms aren't in the history
                         if(!list.contains(searchHistory)) {
