@@ -3,7 +3,7 @@
     <item>
         <shape>
             <corners android:radius="10dp" />
-            <solid android:color="@color/bg_imagebutton_search" />
+            <solid android:color="@color/bg_gray" />
         </shape>
     </item>
 </layer-list>

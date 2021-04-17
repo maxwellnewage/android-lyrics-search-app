@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ic_launcher_background">#3DDC84</color>
-    <color name="bg_edittext_search">#f5f5f5</color>
-    <color name="bg_imagebutton_search">#0085b2</color>
+    <color name="bg_gray">#f5f5f5</color>
+    <color name="bg_blue">#0085b2</color>
 </resources>
