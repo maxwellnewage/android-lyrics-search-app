@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/bg_lyric">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_lyric" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,12 +22,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/purple_200"
-            android:text="@string/holder_lyrics_fragment" />
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="@string/holder_lyrics_fragment"
+            android:layout_marginStart="5dp" />
 
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
 
