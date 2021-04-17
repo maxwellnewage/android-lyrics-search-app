@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lyrics.LyricsFragment">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_lyric">
 
-    <TextView
-        android:id="@+id/tvLyric"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/purple_200"
-        android:text="@string/holder_lyrics_fragment" />
+        android:scrollbars="none"
+        tools:context=".lyrics.LyricsFragment">
 
-</ScrollView>
+        <TextView
+            android:id="@+id/tvLyric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:text="@string/holder_lyrics_fragment" />
+
+    </ScrollView>
+
+</LinearLayout>
+
