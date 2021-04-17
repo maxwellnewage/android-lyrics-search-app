@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Lyrics Search App</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="search_fragment_label">Search Lyrics</string>
 
     <string name="text_artist">Artist</string>
