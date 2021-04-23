@@ -7,15 +7,17 @@ This is an Android Studio Project. You just clone the repo; next open in your ID
 ## Compatibility
 This app was created with minimun API Level 16.
 
-## Features
+## Android Features
 - MVVM Pattern
 - Recyclerview with Viewholder
 - Constraint Layout
 - Retrofit 2
-- Dark and Light Theme
+- All works with fragments and one activity
+- Scrollable Lyrics
+
+## Business Features
 - Search a song
 - History of search
-- All works with fragments and one activity
 
 ## Screens
 | Home |
